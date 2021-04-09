@@ -1,0 +1,286 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>一、内存 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../reference/" />
+    
+    
+    <link rel="prev" href="../" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    前言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    一、内存
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../reference/">
+            
+                <a href="../reference/">
+            
+                    
+                    附录：参考文献
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >一、内存</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x4E00;&#x3001;&#x5185;&#x5B58;">&#x4E00;&#x3001;&#x5185;&#x5B58;</h1>
+<p><strong>&#x95EE; 0001&#xFF1A;&#x5185;&#x5B58;&#x9700;&#x8981;&#x88AB;&#x6709;&#x5E8F;&#x7684;&#x8FDB;&#x884C;&#x7BA1;&#x7406;&#xFF0C;&#x90A3;&#x4E48;&#x5185;&#x5B58;&#x7BA1;&#x7406;&#x5728;&#x5E72;&#x5565;&#xFF1F;</strong></p>
+<p>&#x4ECE;&#x6280;&#x672F;&#x5B9E;&#x73B0;&#x89D2;&#x5EA6;&#x6765;&#x770B; <a href="../reference/#ref0001"><sup>[1]</sup></a>&#xFF0C;Linux &#x5185;&#x5B58;&#x7BA1;&#x7406;&#x7684;&#x5B9E;&#x73B0;&#x6DB5;&#x76D6;&#x4E86;&#x5982;&#x4E0B;&#x9886;&#x57DF;&#x3002;</p>
+<ul>
+<li>&#x5982;&#x4F55;&#x7BA1;&#x7406;&#x7269;&#x7406;&#x5185;&#x5B58;&#xFF1F;<ul>
+<li>&#x5185;&#x5B58;&#x4E2D;&#x7684;&#x7269;&#x7406;&#x5185;&#x5B58;&#x9875;&#x7684;&#x7BA1;&#x7406;&#xFF1B;</li>
+</ul>
+</li>
+<li>&#x5927;&#x5757;&#x5185;&#x5B58;&#x5982;&#x4F55;&#x5206;&#x914D;&#xFF1F;<ul>
+<li>&#x4F19;&#x4F34;&#x7CFB;&#x7EDF;&#xFF1B;</li>
+</ul>
+</li>
+<li>&#x8F83;&#x5C0F;&#x5757;&#x7684;&#x5185;&#x5B58;&#x548C;&#x5206;&#x914D;&#xFF1F;<ul>
+<li>slab &#x5206;&#x914D;&#x5668;&#xFF1B;</li>
+<li>slub &#x5206;&#x914D;&#x5668;&#xFF1B;</li>
+<li>slob &#x5206;&#x914D;&#x5668;&#xFF1B;</li>
+</ul>
+</li>
+<li>&#x975E;&#x8FDE;&#x7EED;&#x5185;&#x5B58;&#x5757;&#x5982;&#x4F55;&#x5904;&#x7406;&#xFF1F;<ul>
+<li>vmalloc &#x673A;&#x5236;&#xFF1B;</li>
+</ul>
+</li>
+<li>&#x8FDB;&#x7A0B;&#x7684;&#x5730;&#x5740;&#x7A7A;&#x95F4;<ul>
+<li>&#xFF08;&#x672A;&#x89E3;&#x51B3;&#xFF09;&#x8FD8;&#x4E0D;&#x77E5;&#x9053;&#x4E3A;&#x4EC0;&#x4E48;&#x5728;&#x8FD9;&#x91CC;&#x4F1A;&#x63D0;&#x53CA;&#x8FDB;&#x7A0B;&#xFF1B;</li>
+</ul>
+</li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../" class="navigation navigation-prev " aria-label="Previous page: 前言">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../reference/" class="navigation navigation-next " aria-label="Next page: 附录：参考文献">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"一、内存","level":"1.2","depth":1,"next":{"title":"附录：参考文献","level":"1.3","depth":1,"path":"reference/README.md","ref":"reference/README.md","articles":[]},"previous":{"title":"前言","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"charpter1/README.md","mtime":"2021-04-09T07:50:56.501Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-04-09T07:35:41.653Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
